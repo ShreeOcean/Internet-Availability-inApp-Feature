@@ -8,12 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
-import com.google.android.material.snackbar.Snackbar
 import com.ocean.checknetconnect.databinding.ActivityMainBinding
 import com.ocean.checknetconnect.old.CheckInternetConnection
-import com.ocean.checknetconnect.old.ConnectionState
-import com.ocean.checknetconnect.old.ConnectivityListener
-import com.ocean.checknetconnect.ref1.ConnectivityObserver
+import com.ocean.checknetconnect.old.ConnectivityObserver
 import com.ocean.checknetconnect.ref1.ConnectivityViewModel
 
 class MainActivity : AppCompatActivity() {//, ConnectivityListener {
@@ -38,8 +35,8 @@ class MainActivity : AppCompatActivity() {//, ConnectivityListener {
 
 //        checkInternetConnection = CheckInternetConnection(this)
 //        checkInternetConnection.connectivityListener = this
-        connectivityObserver = ConnectivityObserver(this)
-        lifecycle.addObserver(connectivityObserver)
+//        connectivityObserver = ConnectivityObserver(this)
+//        lifecycle.addObserver(connectivityObserver)
         connectivityViewModel.connectivityLiveData.observe(this, Observer { isConnected ->
             if (isConnected){
                 Toast.makeText(this, "Internet is available", Toast.LENGTH_SHORT).show()

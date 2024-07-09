@@ -1,10 +1,9 @@
-package com.ocean.checknetconnect.ref1
+package com.ocean.checknetconnect.old
 
 import android.content.Context
 import android.widget.Toast
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
+import com.ocean.checknetconnect.ref1.NetworkUtils
 
 class ConnectivityObserver(private val context: Context): LifecycleObserver {
 
